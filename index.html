@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Animal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <!--                      Home Screen                     -->
+    <section id="home-screen" class="screen">
+      <img src="assets/images/00-bg-homescreen.jpg" alt="Home Background" class="bg-image">
+      <button id="start-game" class="start-button">
+        <img src="assets/images/00-btn-homescreen-start.png" alt="Start Button">
+      </button>
+    </section>
+  </div>
+
+
+  <!--                    Level Selection Screen                  -->
+  <section id="level-selection" class="screen hidden">
+    <img src="assets/images/bg-plain.jpg" alt="Level Selection Background" class="bg-image">
+    <div class="content">
+      <img src="assets/images/0-txt-choose-level.png" alt="Choose Level" class="title">
+      <div class="buttons">
+        <button id="btn-easy" class="level-button">
+          <img src="assets/images/0-btn-easy.png" alt="Easy">
+        </button>
+        <button id="btn-normal" class="level-button">
+          <img src="assets/images/0-btn-normal.png" alt="Normal">
+        </button>
+        <button id="btn-hard" class="level-button">
+          <img src="assets/images/0-btn-hard.png" alt="Hard">
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!--                      Animal Sound Screen                   -->
+  <section id="animal-sound" class="screen hidden">
+    <img src="assets/images/bg-plain.jpg" alt="Animal Sound Background" class="bg-image">
+    <img id="animal-tag" src="" alt="Animal Tag" class="tag">
+    <img src="assets/images/txt-which-animal.png" alt="Which Animal" class="title">
+    <button id="btn-sound-play" class="action-button">
+      <img src="assets/images/btn-sound-play.png" alt="Play Sound">
+    </button>
+    <button id="btn-answer" class="action-button answer">
+      <img src="assets/images/btn-answer.png" alt="Answer">
+    </button>
+  </section>
+
+
+
+  <!--                    Animal Answer Screen                  -->
+  <section id="animal-answer" class="screen hidden">
+    <img src="assets/images/bg-plain.jpg" alt="Animal Answer Background" class="bg-image">
+    
+    <!-- Navigation Buttons -->
+    <button id="btn-back" class="nav-button back">
+      <img src="assets/images/btn-back.png" alt="Back">
+    </button>
+    <button id="btn-home" class="nav-button home">
+      <img src="assets/images/btn-home.png" alt="Home">
+    </button>
+    
+    <!-- Animal Image and Name -->
+    <div class="animal-display">
+      <img id="animal-image" src="" alt="Animal Image">
+      <img id="animal-name" src="" alt="Animal Name">
+    </div>
+    
+    <!-- Next Button -->
+    <button id="btn-next" class="nav-button next">
+      <img src="assets/images/btn-next.png" alt="Next">
+    </button>
+  </section>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

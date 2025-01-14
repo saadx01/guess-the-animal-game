@@ -1,0 +1,225 @@
+/* Reset default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*                    Game container - full screen                    */
+#game-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/*                    Home Screen                   */
+
+/* Background image */
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the screen */
+}
+
+/* Start Button */
+.start-button {
+  position: absolute;
+  bottom: 10%; /* Adjust for "just below center" placement */
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.start-button img {
+  width: 19vw;
+  max-width: 500px;
+  /* width: 250px; */
+  height: auto;
+}
+
+
+
+/* Hide screens by default */
+.hidden {
+  display: none;
+}
+
+
+
+
+
+/*                    Level Selection Screen                  */
+#level-selection .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#level-selection .title {
+  width: 85vw;
+  max-width: 5600px;
+  /* width: 1150px; */
+  margin-bottom: 30px;
+}
+
+.level-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 60px auto; /* Space between buttons */
+}
+
+.level-button img {
+  width: 26vw;
+  max-width: 1500px;
+  /* width: 340px; */
+  height: auto;
+}
+
+
+
+
+/*                      Animal Sound Screen                     */
+#animal-sound .tag {
+  position: absolute;
+  top: 4vh;
+  left: 5vh;
+  /* top: 35px;
+  left: 35px; */
+  width: 9vw;
+  max-width: 580px;
+  /* width: 120px; */
+  height: auto;
+}
+
+#animal-sound .title {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85vw;
+  max-width: 5600px;
+  /* width: 1150px; */
+}
+
+.action-button {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* .action-button img {
+  width: 390px;
+  height: auto;
+} */
+
+#btn-sound-play {
+  top: 64%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden; /* Ensures no extra content spills out */
+}
+
+#btn-sound-play img {
+  width: 32vw;
+  max-width: 2100px;
+  /* width: 450px; */
+  height: auto;
+}
+
+#btn-answer {
+  /* bottom: 35px;
+  right: 35px; */
+  bottom: 2vw;
+  right: 2vw;
+}
+
+#btn-answer img {
+  width: 30vw;
+  max-width: 1300px;
+  /* width: 390px; */
+  height: auto;
+}
+
+
+
+
+/*                    Animal Answer Screen                    */
+.animal-display {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 0px; /* Space between image and text */
+  overflow: hidden; /* Ensures no extra content spills out */
+}
+
+.animal-display img {
+  width: 35vw;
+  max-width: 2000px;
+  /* width: 500px; */
+  height: auto;
+}
+
+#animal-name {
+  width: 50vw;
+  max-width: 2000px;
+  /* width: 700px; */
+  height: auto;
+}
+
+.nav-button {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1; /* To ensure the animal or animal text doesnt come over btns */
+}
+
+.nav-button img {
+  width: 22vw;
+  max-width: 750px;
+  /* width: 300px; */
+  height: auto;
+}
+
+.back img {
+  width: 17vw;
+  max-width: 750px;
+  /* width: 250px; Diff aspect ratio */
+  height: auto;
+}
+
+.nav-button.back {
+  top: 2vw;
+  left: 1vw;
+  /* top: 20px;
+  left: 20px; */
+}
+
+.nav-button.home {
+  top: 2vw;
+  right: 1vw;
+  /* top: 20px;
+  right: 20px; */
+}
+
+.nav-button.next {
+  bottom: 1vw;
+  right: 1vw;
+  /* bottom: 20px;
+  right: 20px; */
+}
