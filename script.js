@@ -9,15 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     levelSelection.style.display = 'block'; // Show Level Selection
   });
 
-  // Handle Level Button Clicks
-  const levelButtons = document.querySelectorAll('.level-button');
-  levelButtons.forEach((button) => {
-    button.addEventListener('click', (event) => {
-      const level = event.target.alt.toLowerCase(); // "easy", "normal", "hard"
-      console.log(`Level selected: ${level}`);
-      // Navigate to the respective Animal Sound Screen (to be implemented next)
-    });
-  });
+
 
 
 
@@ -29,8 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const playSoundButton = document.getElementById('btn-sound-play');
   const answerButton = document.getElementById('btn-answer');
   const animalTag = document.getElementById('animal-tag');
+  const animalAnswerScreen = document.getElementById('animal-answer');
 
-  // Animal Sounds Data (Placeholder for dynamic content)
+  // Animal Data (Placeholder for dynamic content)
   const animals = {
     easy: [
       { tag: 'tag-1.png', sound: '1-1-dog.wav', image: '1-1-dog.png', text: '1-1-dog-txt.png' },
@@ -92,8 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentAnimalIndex = 0;
   let currentLevel = '';
 
-  // Transition from Level Selection to Animal Sound Screen
-  levelButtons.forEach((button, index) => {
+  // Transition from Level Selection to Animal Sound Screen (Handle Level Button Clicks)
+    const levelButtons = document.querySelectorAll('.level-button');
+    levelButtons.forEach((button, index) => {
     button.addEventListener('click', (event) => {
       currentLevel = event.target.alt.toLowerCase();
       levelSelection.style.display = 'none';
@@ -119,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // Animal Answer Screen Elements
-  const animalAnswerScreen = document.getElementById('animal-answer');
   const animalImage = document.getElementById('animal-image');
   const animalName = document.getElementById('animal-name');
   const backButton = document.getElementById('btn-back');

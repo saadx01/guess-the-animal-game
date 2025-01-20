@@ -1,5 +1,5 @@
 /* Reset default styles */
-body, html {
+#game-container *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,6 +7,9 @@ body, html {
 
 /*                    Game container - full screen                    */
 #game-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -57,10 +60,21 @@ body, html {
 /*                    Level Selection Screen                  */
 #level-selection .content {
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+}
+
+#level-selection .content{
+  display: flex;
+  flex-direction: column;
+  gap: 9vh; /* Space between buttons */
+}
+
+#level-selection .content .buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 7vh; /* Space between buttons */
 }
 
 #level-selection .title {
@@ -75,7 +89,7 @@ body, html {
   border: none;
   cursor: pointer;
   display: block;
-  margin: 60px auto; /* Space between buttons */
+  /* margin: 150px auto; Space between buttons */
 }
 
 .level-button img {
